@@ -4,7 +4,8 @@ This project includes code adapted from Unsloth Notebooks:
 - License: GNU LGPL v3.0
 - Files containing adapted code:
   - sft.py
-- Notes: Code adapted to use uv, changed vLLM/TRITON pin logic, added litellm/protobuf pins.
+- Modifications by OpenPipe:
+  - converted from notebook to script format
 
 Full license texts: licenses/LGPL-3.0.txt, licenses/GPL-3.0.txt
 
