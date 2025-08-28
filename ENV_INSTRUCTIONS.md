@@ -4,11 +4,14 @@
 
 - `TAVILY_API_KEY` - Used to power your agent's web searches. You can get a free key [here](https://app.tavily.com).
 
-**Benchmarking**
+**Training**
 
 - `OPENAI_API_KEY` - Used for benchmarking OpenAI models. You can get a key [here](https://platform.openai.com/api-keys).
-- `ANTHROPIC_API_KEY` - Used for benchmarking Anthropic models. You can get a key [here](https://console.anthropic.com/settings/keys).
 - `GOOGLE_API_KEY` - Used for benchmarking Google models. You can get a key [here](https://aistudio.google.com/app/apikey).
+
+**Benchmarking (Optional)**
+
+- `ANTHROPIC_API_KEY` - Used for benchmarking Anthropic models. You can get a key [here](https://console.anthropic.com/settings/keys).
 
 **Observability**
 
