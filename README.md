@@ -5,7 +5,7 @@ This repo demonstrates how to train an LLM using GRPO to exceed SOTA performance
 The chart below shows the accuracy of a Qwen 2.5 14B Instruct model (the same model you will be training) as it learns to perform deep research, eventually exceeding the performance of GPT-4.1 and Sonnet 4. With any luck, your model will be able to do the same!
 
 <div style="text-align: center;">
-  <img src="charts/accuracy-training-progress.svg" width="300">
+  <img src="charts/accuracy-training-progress.svg" width="400">
 </div>
 
 ## Getting Started
