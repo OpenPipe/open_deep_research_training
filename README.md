@@ -1,6 +1,6 @@
 # Open Deep Research Training
 
-This tutorial demonstrates how to train your own deep research agent using GRPO to exceed Sonnet 4's perfromance. Specifically, you will be using the [ART](https://github.com/OpenPipe/ART) library to specialize Qwen 2.5 14B for [Langchain's open deep research](https://github.com/langchain-ai/open_deep_research) framework, and will evaluate your agent's performance using [DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents](https://github.com/Ayanami0730/deep_research_bench). In addition to the GRPO training step, you will also run an initial SFT training run to improve the model's baseline performance.
+This tutorial demonstrates how to train your own deep research agent using GRPO to exceed Sonnet 4's performance. Specifically, you will be using the [ART](https://github.com/OpenPipe/ART) library to specialize Qwen 2.5 14B for [Langchain's open deep research](https://github.com/langchain-ai/open_deep_research) framework, and will evaluate your agent's performance using [DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents](https://github.com/Ayanami0730/deep_research_bench). In addition to the GRPO training step, you will also run an initial SFT training run to improve the model's baseline performance.
 
 The chart below shows the accuracy of a Qwen 2.5 14B Instruct model (the same model you will be training) as it learns to perform deep research, eventually exceeding the performance of GPT-4.1 and Sonnet 4. With any luck, your model will be able to do the same!
 
