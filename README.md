@@ -1,20 +1,44 @@
-This repo contains [Langchain's open deep research](https://github.com/langchain-ai/open_deep_research) and [DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents](https://github.com/Ayanami0730/deep_research_bench) as well as portions adapted from [Unsloth Notebooks](https://github.com/unslothai/notebooks) for SFT training.
+# Open Deep Research Training
 
-Along with these repos it also contains several scripts to enable training (both SFT and RL) of your own model to power your deep research agent.
+This repo demonstrates how to train an LLM using GRPO to exceed SOTA performance at deep research. Specifically, you will be using the [ART](https://github.com/OpenPipe/ART) library to specialize an agent for [Langchain's open deep research](https://github.com/langchain-ai/open_deep_research) framework, and will evaluate your agent's performance using [DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents](https://github.com/Ayanami0730/deep_research_bench).
 
-### Overview
+In addition to the GRPO training step, you will also run an initial SFT training run to improve the model's baseline performance.
 
-You'll have to fill out your .env with your Tavily api key (used to power websearches), Openai api key (used to collect samples for SFT) and Google api key (used to run the benchmark). You'll also have to add your AWS credentials and a backup bucket to store the SFT model to start RL run, as well as to store checkpoints during your RL run.
+## Getting Started
 
-Additionaly we reccomend adding your `WANDB_API_KEY` for observability. 
+### 1. Install dependencies
 
-Then you'll want to run these scripts in this order
+If you haven't already, install `uv` by following the instructions [here](https://docs.astral.sh/uv/getting-started/installation/).
+
+Then install the project dependencies by running `uv sync`.
+
+### 2. Install SkyPilot/RunPod
+
+We'll be using `LocalBackend` to manage the GPU that your model will be trained on. In order to provision a GPU for your training run, you'll need to have SkyPilot installed on your machine and provide it with the credentials to spin up machines on at least one infra provider.
+
+We recommend using RunPod because of their ease of use, but any infra provider that SkyPilot [supports](https://docs.skypilot.co/en/latest/overview.html#bringing-your-infra) will work.
+
+Follow RunPod's **Getting Started** guide [here](https://docs.runpod.io/integrations/skypilot/). You'll have to provide a credit card to use RunPod, but you'll only pay for the time your GPUs are running.
+
+### 3. Set up optional environment variables found in `.env.example`.
+
+Copy `.env.example` to `.env` at the root of the repository, and fill in the values for the environment variables. If you're unsure about any of the values, refer to [ENV_INSTRUCTIONS.md](ENV_INSTRUCTIONS.md).
+
+### 4. Run the scripts
+
+You'll want to run these scripts in this order:
 
 ```
 uv run collect_sft.py # Collect samples for your sft training run. ~1 Hour
 uv run run_sft.py # Run your sft training run. ~1 Hour
 uv run run_train.py # Run your rl training run. >1 Day
 ```
+
+### 5. Generate the benchmarks
+
+TODO: Andie please add instructions here.
+
+... more steps?
 
 ### Modifications
 
