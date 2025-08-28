@@ -1,8 +1,10 @@
 # Open Deep Research Training
 
-This repo demonstrates how to train an LLM using GRPO to exceed SOTA performance at deep research. Specifically, you will be using the [ART](https://github.com/OpenPipe/ART) library to specialize an agent for [Langchain's open deep research](https://github.com/langchain-ai/open_deep_research) framework, and will evaluate your agent's performance using [DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents](https://github.com/Ayanami0730/deep_research_bench).
+This repo demonstrates how to train an LLM using GRPO to exceed SOTA performance at deep research. Specifically, you will be using the [ART](https://github.com/OpenPipe/ART) library to specialize an agent for [Langchain's open deep research](https://github.com/langchain-ai/open_deep_research) framework, and will evaluate your agent's performance using [DeepResearch Bench: A Comprehensive Benchmark for Deep Research Agents](https://github.com/Ayanami0730/deep_research_bench). In addition to the GRPO training step, you will also run an initial SFT training run to improve the model's baseline performance.
 
-In addition to the GRPO training step, you will also run an initial SFT training run to improve the model's baseline performance.
+The chart below shows the accuracy of a Qwen 2.5 14B Instruct model (the same model you will be training) as it learns to perform deep research, eventually exceeding the performance of GPT-4.1 and Sonnet-4. With any luck, your model will be able to do the same!
+
+<img src="charts/accuracy-training-progress.svg" width="100%">
 
 ## Getting Started
 
@@ -45,3 +47,7 @@ TODO: Andie please add instructions here.
 We modified the DeepResearch Bench repo to add a new `run_single_race_bench.py` which allows you to run a single benchmark at a time, needed for running RL runs.
 
 We modified the Open Deep Research repo to change the search to use Tavily's advanced search answering to enable training models with smaller context windows.
+
+### Acknowledgements
+
+Huge thanks to the [LangChain](https://github.com/langchain-ai/langchain) and [Tavily](https://github.com/tavily-ai) teams for collaborating on this project and providing the services that the agent is built on. Additionally, we greatly appreciate the overall support, feedback, and adoption that [ART](https://github.com/OpenPipe/ART) has received from the open source community.
