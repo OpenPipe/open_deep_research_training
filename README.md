@@ -40,9 +40,12 @@ uv run run_train.py # Run your rl training run. >1 Day
 
 ### 5. Generate the benchmarks
 
-TODO: Andie please add instructions here.
+Run the benchmark script in the evaluate folder with the models you want to benchmark
+```
+uv run evaluate/benchmark_model.py
+```
 
-... more steps?
+Then run the display_benchmarks.ipynb to display the results.
 
 ### Modifications
 
