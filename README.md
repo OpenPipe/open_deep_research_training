@@ -46,7 +46,7 @@ Run the benchmark script in the evaluate folder with the models you want to benc
 uv run evaluate/benchmark_model.py
 ```
 
-Then run the display_benchmarks.ipynb to display the results.
+Then run the `evaluate/display_benchmarks.ipynb` notebook to display the results.
 
 ### Modifications
 
